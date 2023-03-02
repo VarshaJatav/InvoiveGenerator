@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+   
+   
+</head>
+<body>
+    <div id="page">
+        <div id="heading">Invoice</div>
+        <div id="top">
+
+            <div class="top1">
+                <input type="text" placeholder="Your Company Name">
+                <input type="text" placeholder="Tax Name">
+                <input type="number" placeholder="Tax Number">
+            <input type="text" placeholder="Your Address">
+            
+        </div>
+        <div class="top2">
+            <input type="number" placeholder="Your Contact Number">
+            <input type="email" placeholder="Your Email">
+            <input type="text" placeholder="Your Website">
+
+        </div>
+        <div class="drop-zone">
+            <span class="drop-zone__prompt">Drop file here or click to upload</span>
+            <input type="file" name="myFile" class="drop-zone__input">
+        </div>
+       
+    </div>
+
+        <div id="billto">
+            <div>
+                <input type="text" placeholder="Clients Name">
+                <input type="text" placeholder="Clients Address">
+                <input type="number" placeholder="Clients Contact Number">
+                <input type="email" placeholder="Clients Email">
+            </div>
+            <div>
+                <input type="date" class="date">
+            </div>
+            
+        </div>
+
+
+        <div id="billl">
+            <div>
+
+                <div id="plus">+</div>
+            </div>
+            <div>
+
+                <table id="invoice-table">
+                    
+                    <thead>
+                        <tr>
+                            <th scope="col">Description</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Rate</th>
+                            <th scope="col">Discount</th>
+                            <th scope="col">GST</th>
+                            <th scope="col">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-tbody">
+                        <tr>
+                            <td><input type="text" required name='pname[]' class="pname" placeholder="product description" id="num1"></td>
+                            <td><input type="number" required name="qty[]" id="num2" class="qty"></td>
+                            <td><input type="number" required name="price[]" id="num3" class="price"></td>
+                            <td><input type="number" required name="discount[]" id="num4" class="discount"></td>
+                            <td><input type="number" required name="gst[]" id="num5" class="gst"></td>
+                            <td><input type="text"   required name="total[]" id="show" class="total" readonly></td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+
+                        <tr>
+                            <td colspan="5" class="additional" >Total</td>
+                            <td><input type="text" id="totall" readonly></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="additional">GST</td>
+                            <td><input type="text" id="gstt" readonly></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="additional">Shipping Charges</td>
+                            <td><input type="text" id="ship" class="ping"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="additional">Net Amount</td>
+                            <td><input type="text" id="netamount" readonly></td>
+                        </tr>
+                        
+                    </tfoot>
+                    
+                </table>
+            </div>
+        </div>
+        <div class="note">
+            <div>Note</div>
+            <div>
+                <textarea name="note" id="" cols="30" rows="5"></textarea>
+            </div>
+        </div>
+        <div class="terms">
+            <div>Terms and Conditions</div>
+            <div>
+                <textarea name="" id="" cols="30" rows="5"></textarea>
+            </div>
+        </div>
+
+    </div>
+    <div class="print" id="download">
+        <button>Print</button>
+    </div>
+
+        <script src="scripting.js"></script>
+    
+</body>
+</html>
